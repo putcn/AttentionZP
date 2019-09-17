@@ -191,7 +191,7 @@ def generate_vec(data_path):
     zp_info_test = cPickle.load(read_f)
     read_f.close()
 
-    vectorized_sentences = numpy.load(data_path + "sen.npy")
+    vectorized_sentences = numpy.load(data_path + "sen.npy", allow_pickle=True)
     for zp,candi_info in zp_info_test:
         index_in_file,sentence_index,zp_index,ana = zp        
         if ana == 1:
