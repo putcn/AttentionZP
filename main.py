@@ -7,7 +7,7 @@ import math
 import timeit
 import numpy
 import random
-import cPickle
+import _pickle as cPickle
 sys.setrecursionlimit(1000000)
 
 import torch
@@ -77,7 +77,7 @@ def main():
     read_f.close()
     test_generater = DataGnerater("test",256)
 
-    print "Building torch model"
+    print("Building torch model")
     model = Network(nnargs["embedding_size"],nnargs["embedding_dimention"],embedding_matrix,nnargs["hidden_dimention"],2,nnargs["attention"]).cuda()
 
     this_lr = 0.003
@@ -119,8 +119,8 @@ def main():
                 continue
             predict.append((data["result"][s:e],output_softmax[s:e]))
     result = get_evaluate(predict)
-    print "dev:",best_result["performance"]
-    print "test:",result["performance"]
+    print("dev:",best_result["performance"])
+    print("test:",result["performance"])
  
 if __name__ == "__main__":
     main()

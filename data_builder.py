@@ -16,10 +16,12 @@ from data_generater import *
 random.seed(0)
 numpy.random.seed(0)
 
-import cPickle
+import _pickle as cPickle
 sys.setrecursionlimit(1000000)
 
 MAX = 2
+
+file = open
 
 def get_sentence(zp_sentence_index,zp_index,nodes_info):
     nl,wl = nodes_info[zp_sentence_index]

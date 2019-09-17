@@ -9,7 +9,7 @@ import timeit
 
 from conf import *
 
-import cPickle
+import _pickle as cPickle
 sys.setrecursionlimit(1000000)
 
 random.seed(0)
