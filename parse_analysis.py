@@ -74,18 +74,18 @@ class Stack:
 def print_node_list(nl):
     for n in nl:
         if n.parent:
-            print("******")
-            print(n.index,n.word,n.tag,n.parent.tag)
-            print("child:")
+            print "******"
+            print n.index,n.word,n.tag,n.parent.tag
+            print "child:"
             for q in n.child:
-                print(q.tag),
+                print q.tag,
             print
         else:
-            print("******")
-            print(n.index,n.word,n.tag,"None")
-            print("child:")
+            print "******"
+            print n.index,n.word,n.tag,"None"
+            print "child:"
             for q in n.child:
-                print (q.tag),
+                print q.tag,
             print
 
 def buildTree(parse):

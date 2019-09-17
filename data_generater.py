@@ -6,11 +6,9 @@ import math
 import timeit
 from subprocess import *
 from conf import *
-import _pickle as cPickle
+import cPickle
 import collections
 sys.setrecursionlimit(1000000)
-
-file = open
 
 class DataGnerater():
     def __init__(self,file_type,max_pair):
